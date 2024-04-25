@@ -455,60 +455,7 @@
 
         </div>
 
-
-        <!--
-          - clients
-        -->
-
-        <!-- <section class="clients">
-
-          <h3 class="h3 clients-title">Clients</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section> -->
-
       </article>
-
-
 
 
 
@@ -615,6 +562,7 @@
 
         </section>
 
+        
         <section class="skill">
 
           <h3 class="h3 skills-title">My skills</h3>
@@ -703,10 +651,74 @@
 
         </section>
 
+        <br>
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+          <h3 class="h3 clients-title">Certificates</h3>
+          <ul class="clients-list has-scrollbar">
+            <li class="clients-item">
+              <a href="#" onclick="showEnlargedImage('./assets/images/DAA Course.jpg')">
+                <img src="./assets/images/DAA Course.jpg" alt="client logo">
+              </a>
+            </li>
+            <li class="clients-item">
+              <a href="#" onclick="showEnlargedImage('./assets/images/C1.jpg')">
+                <img src="./assets/images/C1.jpg" alt="client logo">
+              </a>
+            </li>
+            <li class="clients-item">
+              <a href="#" onclick="showEnlargedImage('./assets/images/C2.jpg')">
+                <img src="./assets/images/C2.jpg" alt="client logo">
+              </a>
+            </li>
+            <li class="clients-item">
+              <a href="#" onclick="showEnlargedImage('./assets/images/C3.jpg')">
+                <img src="./assets/images/C3.jpg" alt="client logo">
+              </a>
+            </li>
+            <li class="clients-item">
+              <a href="#" onclick="showEnlargedImage('./assets/images/C4.jpg')">
+                <img src="./assets/images/C4.jpg" alt="client logo">
+              </a>
+            </li>
+            <li class="clients-item">
+              <a href="#" onclick="showEnlargedImage('./assets/images/C5.jpg')">
+                <img src="./assets/images/C5.jpg" alt="client logo">
+              </a>
+            </li>
+            <li class="clients-item">
+              <a href="#" onclick="showEnlargedImage('./assets/images/C6.jpg')">
+                <img src="./assets/images/C6.jpg" alt="client logo">
+              </a>
+            </li>
+          </ul>
+        </section>
+        
+        <!-- Enlarged image container -->
+        <div id="enlarged-image" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999;" onclick="hideEnlargedImage()">
+          <img id="enlarged-img" src="" alt="Enlarged Image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 90%; max-height: 90%;">
+        </div>
+        
+        <script>
+        function showEnlargedImage(imageSrc) {
+          // Show the enlarged image container
+          document.getElementById('enlarged-image').style.display = 'block';
+          // Set the source of the enlarged image
+          document.getElementById('enlarged-img').src = imageSrc;
+        }
+        
+        function hideEnlargedImage() {
+          // Hide the enlarged image container
+          document.getElementById('enlarged-image').style.display = 'none';
+        }
+        </script>
+      
       </article>
-
-
-
+      
 
 
       <!--
@@ -728,11 +740,7 @@
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
+              <button data-filter-btn>Data Science</button>
             </li>
 
             <li class="filter-item">
@@ -760,11 +768,7 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
+                <button data-select-item>Data Science</button>
               </li>
 
               <li class="select-item">
@@ -777,26 +781,28 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="all">
+              <a href="https://github.com/KenishaSurana/Maze-Solver">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                  <img src="./assets/images/project-1.png" alt="finance" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Finance</h3>
+                <h3 class="project-title">Maze Solver</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category">It takes a gif of a maze as input and outputs a solution to the maze.
+                </p>
+                <p class="project-category">Tech Stacks: Python, DSA</p>
 
               </a>
             </li>
 
             <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+              <a href="https://github.com/KenishaSurana/portfolio">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -806,14 +812,15 @@
                   <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Orizon</h3>
+                <h3 class="project-title">My Portfolio</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category">Kenisha Surana's Portfolio</p>
+                <p class="project-category">Tech Stacks: HTML, CSS, JavaScript</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
+            <!-- <li class="project-item  active" data-filter-item data-category="web design">
               <a href="#">
 
                 <figure class="project-img">
@@ -937,7 +944,7 @@
                 <p class="project-category">Web development</p>
 
               </a>
-            </li>
+            </li> -->
 
           </ul>
 
